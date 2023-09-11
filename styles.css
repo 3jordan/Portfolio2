@@ -1,5 +1,5 @@
 /* Reset some default styles */
-body, h1, h2, p, ul, li {
+.main-body, .name, .titles, .text, .unordered-list, .list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -13,7 +13,7 @@ body, h1, h2, p, ul, li {
 }
 
 /* Global Styles */
-body {
+.main-body {
     background-color: var(--primary-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -33,7 +33,7 @@ body {
     --pearlescent-color: #95a5a6; /* Pearlescent gray */
 }
 
-html {
+.whole-body {
     scroll-behavior: smooth;
 }
 /* Make the navigation bar sticky */
@@ -53,18 +53,13 @@ html {
 /* Add some styling to the sticky navigation bar */
 .navbar {
     background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
-    /* Add other styles as needed */
-}
-
-nav {
-    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
-    color: #fff;
+    color: #fff !important;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar a {
-    color: #fff;
+.navbar #menu .list .list-item{
+    color: #fff; 
     margin-left: 20px; /* Add some space between the links */
     text-decoration: none;
     font-weight: bold;
@@ -72,7 +67,7 @@ nav {
     transition: color 0.3s ease;
 }
 
-nav h1 {
+.navbar .name {
     margin: 0;
     padding: 0;
     font-size: 24px;
@@ -81,26 +76,26 @@ nav h1 {
     letter-spacing: 2px;
 }
 
-nav ul {
+.navbar .unordered-list {
     list-style: none;
 }
 
-nav ul li {
+.navbar .unordered-list .list {
     display: inline;
     margin-right: 20px;
 }
 
-nav ul li a {
+.navbar .unordered-list .list{
     text-decoration: none;
-    color: #fff;
+    color: #fff !important;
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #0077b6; /* Darker blue on hover */
-    background-color: #fff;
+.navbar .unordered-list .list-item:hover {
+    color: #0077b6 !important; /* Darker blue on hover */
+    background-color: #fff !important;
     border-radius: 5px;
     padding: 5px 10px;
     transition: all 0.3s ease;
@@ -117,18 +112,18 @@ nav ul li a:hover {
     position: relative;
 }
 
-.hero h2 {
+.hero .titles {
     font-size: 36px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero p {
+.hero .text {
     font-size: 18px;
 }
 
 /* About, Skills, Projects, and Resume Sections */
-.about, .skills, .projects, .resume {
+#about, #skills, #projects, #resume {
     background-color: #fff;
     padding: 40px 0;
     text-align: center;
@@ -143,7 +138,7 @@ nav ul li a:hover {
 
 
 
-.about h2, .skills h2, .projects h2, .resume h2 {
+#about .titles, #skills .titles, #projects .titles, #resume .titles {
     font-size: 28px;
     margin-bottom: 20px;
     color: #0077b6; /* Dark blue */
@@ -152,15 +147,15 @@ nav ul li a:hover {
 }
 
 
-.projects .project h3 {
+#projects .project .subtitles {
     font-size: 24px;
     margin-bottom: 10px;
     color: #0077b6; /* Dark blue */
 }
 
-.projects .project p {
-    font-size: 16px;
-    color: #555;
+#projects .project .text {
+    font-size: 20px;
+    color: #383737;
 }
 
 /* Keyframe Animation for Bouncing Projects */
@@ -174,7 +169,7 @@ nav ul li a:hover {
 }
 
 /* Remove animation from initial load */
-.projects .project {
+#projects .project {
     background-color: #f9f9f9;
     padding: 20px;
     margin: 20px 0;
@@ -182,13 +177,13 @@ nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.project img{
+.project-image{
     width: 80%;
     height: auto;
 }
 
 /* Apply animation when hovering over project elements */
-.projects .project:hover {
+#projects .project:hover {
     animation: bounce 1s ease infinite;
 }
 
@@ -231,14 +226,14 @@ nav ul li a:hover {
 }
 
 /* Contact Section */
-.contact {
+#contact {
     background-color: #f2f7ff; /* Light blue background */
     padding: 40px 0;
     text-align: center;
     border-top: 1px solid #ccc;
 }
 
-.contact h2 {
+#contact .titles {
     font-size: 28px;
     margin-bottom: 20px;
     color: #0077b6; /* Dark blue */
@@ -246,37 +241,19 @@ nav ul li a:hover {
     text-transform: uppercase;
 }
 
-.contact p {
+#contact .text {
     font-size: 18px;
     color: #555;
     margin-bottom: 20px;
 }
 
-.contact .social-links {
+#contact .social-links {
     margin-top: 20px;
 }
 
-.contact .social-links a {
+#contact .social-links-symbol{
     display: inline-block;
     margin-right: 20px;
-}
-
-.contact .social-links img {
-    width: 40px;
-    height: 40px;
-}
-
-/* Lightbox for Project Images */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    text-align: center;
-    z-index: 999;
 }
 
 .close-button {
@@ -289,14 +266,14 @@ nav ul li a:hover {
 }
 
 /* Animated Counters */
-.counters {
+#counters {
     background-color: #f2f7ff; /* Light blue background */
     padding: 40px 0;
     text-align: center;
     border-top: 1px solid #ccc;
 }
 
-.counters h2 {
+#counters .titles {
     font-size: 28px;
     margin-bottom: 20px;
     color: #0077b6; /* Dark blue */
@@ -325,7 +302,6 @@ nav ul li a:hover {
     color: #555;
 }
 
-/* CSS */
 .animated-background {
     position: fixed;
     top: 0;
@@ -356,27 +332,27 @@ nav ul li a:hover {
   }
   
 
-/* Global Styles for Desktop */
-/* These styles will apply to screens larger than 768px */
-body {
+
+/* larger than 768px */
+.main-body {
     font-size: 16px;
-    /* Add other desktop styles here */
+    /* desktop styles */
 }
 
-/* Media Query for Tablets (768px and below) */
+/* (768px and below) */
 @media screen and (max-width: 768px) {
     /* Adjust font size and other styles for tablets */
-    body {
+    .main-body {
         font-size: 14px;
-        /* Add tablet-specific styles here */
+        /*tablet styles */
     }
 }
 
-/* Media Query for Mobile Devices (480px and below) */
+/* (480px and below) */
 @media screen and (max-width: 480px) {
     /* Adjust font size and other styles for mobile devices */
-    body {
+    .main-body {
         font-size: 12px;
-        /* Add mobile-specific styles here */
+        /*mobile styles */
     }
 }
