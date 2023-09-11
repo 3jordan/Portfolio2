@@ -158,6 +158,32 @@
     color: #383737;
 }
 
+
+/* Skills Section */
+#skills .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#skills .skill {
+    flex-basis: calc(33.33% - 20px); /* Adjust the width as needed */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#skills .skill {
+    font-size: 36px;
+    color: #0077b6; /* Dark blue */
+}
+
+#skills .skill .text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #383737;
+}
+
+
 /* Keyframe Animation for Bouncing Projects */
 @keyframes bounce {
     0%, 100% {
