@@ -1,4 +1,3 @@
-/* Reset default styles */
 .main-body, .name, .titles, .text, .unordered-list, .list {
     margin: 0;
     padding: 0;
@@ -7,11 +6,14 @@
 
 @font-face {
     font-family: 'Bromawo-Regular';
-    src: url('Bromawo-Regular.ttf') format('woff2'), /* Modern Browsers */
-         url('Bromawo-Regular.ttf') format('woff'); /* Older Browsers */
+    src: url('Bromawo-Regular.ttf') format('woff2'), 
+         url('Bromawo-Regular.ttf') format('woff'); 
+    font-family: 'DjangoFont';
+    src: url('ITC\ Avant\ Garde\ Gothic\ Bold\ Oblique.otf') format('woff2'),
+        url('ITC\ Avant\ Garde\ Gothic\ Bold\ Oblique.otf') format('woff');
 }
 
-/* Global Styles */
+
 .main-body {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -24,19 +26,19 @@
     padding: 20px;
 }
 
-/*color scheme */
+
 :root {
-    --primary-color: #111; /* Dark background */
-    --secondary-color: #333; /* Slightly lighter background */
-    --accent-color: #3498db; /* Bright blue accent */
-    --pearlescent-color: #95a5a6; /* Pearlescent gray */
+    --primary-color: #111; 
+    --secondary-color: #333;
+    --accent-color: #3498db; 
+    --pearlescent-color: #95a5a6; 
 }
 
 .whole-body {
     scroll-behavior: smooth;
 }
 
-/*navigation bar */
+
 .navbar {
     position: sticky;
     left: 0;
@@ -50,7 +52,7 @@
 }
 
 
-/*styling navigation bar */
+
 .navbar {
     background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
     color: #fff !important;
@@ -60,7 +62,6 @@
 
 .navbar #menu .list .list-item{
     color: #fff; 
-    margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
@@ -94,14 +95,14 @@
 }
 
 .navbar .unordered-list .list-item:hover {
-    color: #0077b6 !important; /* Darker blue on hover */
-    background-color: #fff !important;
+    color: #0077b6 !important;
+    background-color: lightgrey;
     border-radius: 5px;
     padding: 5px 10px;
     transition: all 0.3s ease;
 }
 
-/* Hero Section */
+
 .hero {
     background-image: url('background-image.jpg');
     background-size: cover;
@@ -122,7 +123,26 @@
     font-size: 18px;
 }
 
-/* About, Skills, Projects, and Resume Sections */
+.hero-text p{
+    font-size: 5em;
+    text-align: center;
+    color: white;
+    margin: 0;
+    line-height: 0;
+}
+
+.hero-text p:nth-of-type(4) {
+    color: var(--accent-color);
+}
+
+.quote-text .quote {
+    font-size: 1em; /* Adjust the font size as desired */
+    text-align: center;
+    color: white;
+    margin: 70px 0; /* Add margin to separate it from the hero titles */
+}
+
+
 #about, #skills, #projects, #resume {
     background-color: #fff;
     padding: 40px 0;
@@ -141,7 +161,7 @@
 #about .titles, #skills .titles, #projects .titles, #resume .titles {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #0077b6; /* Dark blue */
+    color: #0077b6; 
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -150,7 +170,7 @@
 #projects .project .subtitles {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #0077b6; /* Dark blue */
+    color: #0077b6;
 }
 
 #projects .project .text {
@@ -159,22 +179,38 @@
 }
 
 
-/* Skills Section */
+
 #skills .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #skills .skill {
     flex-basis: calc(33.33% - 20px);
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
+    font-size: 36px;
+    color: #0077b6;
 }
 
-#skills .skill {
-    font-size: 36px;
-    color: #0077b6; /* Dark blue */
+
+#skills .skill .skill-icon {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0077b6;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 55px;
+    font-size: 28px;
+    font-weight: bold;
+    font-family:sans-serif;
+    
 }
 
 #skills .skill .text {
@@ -183,8 +219,14 @@
     color: #383737;
 }
 
+#skills .skill:nth-child(6) p {
+    position: relative;
+    top: -10px;
+    margin-top: 15px;
+    padding-bottom: 3px;
+}
 
-/* Keyframe Animation for Bouncing Projects */
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -208,12 +250,12 @@
     height: auto;
 }
 
-/* animation when hovering over project elements */
+
 #projects .project:hover {
     animation: bounce 1s ease infinite;
 }
 
-/*fade-in animation */
+
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
@@ -221,14 +263,13 @@
 
 @keyframes fadeIn {
     from {
-        opacity: 0; /* Start with full transparency */
+        opacity: 0;
     }
     to {
-        opacity: 1; /* End with full visibility */
+        opacity: 1; 
     }
 }
 
-/* slide-in animation from the left */
 .slide-in-left {
     opacity: 0;
     transform: translateX(-100%);
@@ -246,54 +287,102 @@
     }
 }
 
-/*box shadow */
+
 .box-shadow {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Section */
+.fancy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, #3498db, #2980b9);
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+    transform-origin: center center;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* Initial text shadow */
+}
+
+.fancy-button:hover {
+    background-image: linear-gradient(45deg, #2980b9, #3498db);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow on hover */
+}
+
+
+
 #contact {
-    background-color: #f2f7ff; /* Light blue background */
+    background-color: #f2f7ff;
     padding: 40px 0;
     text-align: center;
     border-top: 1px solid #ccc;
 }
 
+#contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 #contact .titles {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #0077b6; /* Dark blue */
+    color: #0077b6;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-#contact .text {
-    font-size: 18px;
-    color: #555;
+#contact .form-group {
     margin-bottom: 20px;
+    text-align: left;
 }
 
-#contact .social-links {
-    margin-top: 20px;
+#contact label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-#contact .social-links-symbol{
-    display: inline-block;
-    margin-right: 20px;
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.close-button {
+#contact button[type="submit"] {
+    background-color: #0077b6;
     color: #fff;
-    font-size: 50px;
-    position: absolute;
-    top: 20px;
-    right: 30px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+#contact button[type="submit"]:hover {
+    background-color: darkblue;
+    color: #fff;
+}
+
+
 
 /* Animated Counters */
 #counters {
-    background-color: #f2f7ff; /* Light blue background */
+    background-color: #f2f7ff;
     padding: 40px 0;
     text-align: center;
     border-top: 1px solid #ccc;
@@ -302,7 +391,7 @@
 #counters .titles {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #0077b6; /* Dark blue */
+    color: #0077b6;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -318,7 +407,7 @@
 
 .counter-icon {
     font-size: 24px;
-    color: #0077b6; /* Dark blue */
+    color: #0077b6;
     margin-bottom: 10px;
 }
 
@@ -367,7 +456,6 @@
 
 /* (768px and below) */
 @media screen and (max-width: 768px) {
-    /* Adjust font size and other styles for tablets */
     .main-body {
         font-size: 14px;
         /*tablet styles */
@@ -376,7 +464,6 @@
 
 /* (480px and below) */
 @media screen and (max-width: 480px) {
-    /* Adjust font size and other styles for mobile devices */
     .main-body {
         font-size: 12px;
         /*mobile styles */

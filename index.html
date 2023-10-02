@@ -6,6 +6,12 @@
     <title>Jordan Donahue - Software Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="module"  src="function.js"></script>
+    <script src="node_modules/split-text-js/SplitTextJS.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+
+
+
 </head>
 <body class="main-body">
 
@@ -24,15 +30,22 @@
     </nav>
 
 
-    <!-- Hero Section -->
+
     <header class="hero animatedGradient">
         <div class="container">
-            <h2 class="titles">Software Developer</h2>
-            <p><i class="fab fa-python"></i> Python | <i class="fab fa-html5"></i> HTML/CSS | <i class="fab fa-js"></i> JavaScript | <i class="fas fa-database"></i> SQL | <i class="fab fa-java"></i> Java | <i class="fab fa-python"></i> Django | <i class="fas fa-cogs"></i> Spring</p>
+            <div class="hero-text">
+            <p>UI Designer</p>
+            <p>Front End Developer</p>
+            <p>Back End Developer</p>
+            <p>Software Developer</p>
+            </div>
+            <div class="quote-text">
+                <p class="quote">The purpose of software engineering is to control complexity, not to create it.</p>
+            </div>
         </div>
     </header>
 
-    <!-- About Section -->
+ 
     <section id="about" class="about fade in">
         <div class="container">
             <h2 class="titles">About Me</h2>
@@ -40,7 +53,6 @@
         </div>
     </section>
 
-<!-- Skills Section -->
 <section id="skills" class="skills fade in">
     <div class="container">
         <h2 class="titles">Skills</h2>
@@ -66,7 +78,7 @@
                 <p>Java</p>
             </div>
             <div class="skill">
-                <i class="fab fa-python"></i>
+                <p class="skill-icon">Dj</p>
                 <p>Django</p>
             </div>
             <div class="skill">
@@ -82,7 +94,6 @@
 </section>
 
 
-<!-- Projects Section -->
 <section id="projects" class="projects fade in box-shadow">
     <div class="container">
         <h2 class="titles">Projects</h2>
@@ -90,25 +101,21 @@
         <div class="project">
             <h3 class="sub-titles">Little Legends Daycare (Website)</h3>
             <p class="text">"Little Legends Daycare's website is a user-friendly hub providing parents with essential information about our nurturing environment, programs, and dedicated staff."</p>
-            <!-- image for the project preview -->
+            
             <a href="https://3jordan.github.io/little-legends/" target="_blank">
                 <img class="project-image" src="images/Little-Legends.png" alt="Little Legends Daycare Preview">
             </a>
         </div>
-        <!-- Project 2 Preview -->
         <div class="project">
             <h3 class="sub-titles">Project Copycat</h3>
             <p class="text">This project is a faithful replica of Twitter's login page, showcasing my ability to recreate complex web interfaces and enhance my front-end development skills.</p>
-            <!--image for the project preview -->
             <a href="https://3jordan.github.io/copycat/" target="_blank">
             <img class="project-image"  src="images/twitter-copycat-ss.png" alt="Project Copycat Preview">
             </a>
         </div>
-        <!-- Project 3 Preview -->
         <div class="project">
             <h3 class="sub-titles">Project Fictional Charity</h3>
             <p class="text">This website design project is dedicated to a fictional charity organization, highlighting my creative prowess in crafting impactful web experiences for philanthropic causes.</p>
-            <!--image for the project preview -->
             <a href="https://3jordan.github.io/fictional-charity/" target="_blank">
             <img class="project-image"  src="images/fictional-charity-ss.png"  alt="Project Fictional Charity Preview">
             </a>
@@ -117,18 +124,17 @@
 </section>
 
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume fade in box-shadow">
-        <div class="container">
-            <h2 class="titles">Resume</h2>
-            <div class="resume-preview">
-                <embed src="resume (1).pdf" type="application/pdf" width="100%" height="500">
-            </div>
-            <p class="text">
-                <a href="resume.pdf" download class="resume-download-button">Download Resume</a>
-            </p>
+<section id="resume" class="resume fade in box-shadow">
+    <div class="container">
+        <h2 class="titles">Resume</h2>
+        <div class="resume-preview">
+            <embed src="Resume (1).pdf" type="application/pdf" width="100%" height="500">
         </div>
-    </section>
+        <p class="text">
+            <a href="resume.pdf" download class="fancy-button">Download Resume</a>
+        </p>
+    </div>
+</section>
 
     <!-- Animated Counters -->
     <section id="counters" class="counters">
@@ -145,12 +151,31 @@
         </div>
     </section>
 
-
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="titles">Contact Me</h2>
-            <p class="text">Email: jrdndnh@gmail.com</p>
+            <form action="https://formcarry.com/s/j4VMuValdZ" method="post" accept-charset="UTF-8">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    
+    
+        <div class="container">
+            <h2 class="titles">Socials</h2>
             <div class="social-links">
                 <a href="https://github.com/3jordan" target="_blank" class="social-link-symbol"><i class="fab fa-github"></i></a>
             </div>
