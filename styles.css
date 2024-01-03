@@ -30,7 +30,7 @@
 :root {
     --primary-color: #111; 
     --secondary-color: #333;
-    --accent-color: #3498db; 
+    --accent-color: #74a2c1; 
     --pearlescent-color: #95a5a6; 
 }
 
@@ -114,17 +114,17 @@
 }
 
 .hero .titles {
-    font-size: 36px;
+    font-size: 44px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero .text {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .hero-text p{
-    font-size: 5em;
+    font-size: 6em;
     text-align: center;
     color: white;
     margin: 0;
@@ -136,10 +136,10 @@
 }
 
 .quote-text .quote {
-    font-size: 1em; /* Adjust the font size as desired */
+    font-size: 1.25em;
     text-align: center;
     color: white;
-    margin: 70px 0; /* Add margin to separate it from the hero titles */
+    margin: 70px 0;
 }
 
 
@@ -150,7 +150,6 @@
     transform: translateY(20px);
     transition: transform 1.5s ease;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
     margin: 40x;
     font-size: 21px;
 }
@@ -167,6 +166,12 @@
 }
 
 
+.showcase-container{
+    display: flex;
+    gap: 1em;
+}
+
+
 #projects .project .subtitles {
     font-size: 24px;
     margin-bottom: 10px;
@@ -178,53 +183,99 @@
     color: #383737;
 }
 
+.project .slideshow {
+    overflow: hidden;
+}
+
+.project .slideshow-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project .project-image {
+    width: 100%;
+    height: auto;
+}
+
+.project .slideshow img {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.project .slideshow img:first-child {
+    display: block;
+}
+
+
 
 
 #skills .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border-radius: 0;
 }
 
-#skills .skill {
-    flex-basis: calc(33.33% - 20px);
-    text-align: center;
-    margin-bottom: 20px;
+.skill {
     position: relative;
-    font-size: 36px;
+    width: 150px; 
+    height: 150px;
+    margin: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#skills .skill i {
+    font-size: 40px;
+    margin-top: 20px;
     color: #0077b6;
 }
 
-
 #skills .skill .skill-icon {
     position: absolute;
-    top: 0px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background-color: #0077b6;
     color: #fff;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    line-height: 55px;
-    font-size: 28px;
+    line-height: 60px;
+    font-size: 22px;
     font-weight: bold;
-    font-family:sans-serif;
-    
+    font-family: sans-serif;
 }
 
 #skills .skill .text {
-    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
     font-size: 18px;
     color: #383737;
 }
 
-#skills .skill:nth-child(6) p {
-    position: relative;
-    top: -10px;
-    margin-top: 15px;
-    padding-bottom: 3px;
-}
+/* Add other styles as needed */
+
+
 
 
 @keyframes bounce {

@@ -9,6 +9,10 @@
     <script type="module"  src="function.js"></script>
     <script src="node_modules/split-text-js/SplitTextJS.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/MotionPathPlugin.min.js"></script>
+
 
 
 
@@ -40,7 +44,7 @@
             <p>Software Developer</p>
             </div>
             <div class="quote-text">
-                <p class="quote">The purpose of software engineering is to control complexity, not to create it.</p>
+                <p class="quote">"The purpose of software engineering is to control complexity, not to create it."- John L. Bentley</p>
             </div>
         </div>
     </header>
@@ -49,45 +53,66 @@
     <section id="about" class="about fade in">
         <div class="container">
             <h2 class="titles">About Me</h2>
-            <p class="text">I am an 18-year-old software developer from Tupelo, Mississippi, currently attending Base Camp Coding Academy. I had no prior coding experience before enrolling in this school, yet during my time here, I swiftly acquired proficiency in various programming languages. Outside of my studies, I find enjoyment in video games and regular gym sessions. My commitment to hard work, kindness, and a willingness to assist others defines my approach to both learning and life.</p>
+            <p class="text">I am an 18-year-old software developer from Tupelo, Mississippi, currently attending Base Camp Coding Academy. I had no prior coding experience before enrolling in this school, yet during my time here, I swiftly acquired proficiency in various programming languages. Outside of my studies, I find enjoyment in video games and going to the gym. My commitment to hard work, kindness, and a willingness to assist others defines my approach to both learning and life.</p>
         </div>
     </section>
 
 <section id="skills" class="skills fade in">
-    <div class="container">
-        <h2 class="titles">Skills</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <i class="fab fa-python"></i>
-                <p>Python</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-html5"></i>
-                <p>HTML/CSS</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-js"></i>
-                <p>JavaScript</p>
-            </div>
-            <div class="skill">
-                <i class="fas fa-database"></i>
-                <p>SQL</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-java"></i>
-                <p>Java</p>
-            </div>
-            <div class="skill">
-                <p class="skill-icon">Dj</p>
-                <p>Django</p>
-            </div>
-            <div class="skill">
-                <i class="fas fa-cogs"></i>
-                <p>Spring</p>
-            </div>
-            <div class="skill">
-                <i class="fab fa-github"></i>
-                <p>GitHub</p>
+    <svg height="0" xmlns="http://www.w3.org/2000/svg">
+        <path id="circlePath" d="M100 100 m -75 0 a 75 75 0 1 0 150 0 a 75 75 0 1 0 -150 0" />
+      </svg>
+    <h2 class="titles">Skills</h2>
+    <div class="orbit-container">           
+        <div class="container">
+            <div class="skills-container">
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML/CSS</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <p>SQL</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-java"></i>
+                    <p>Java</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-code"></i>
+                    <p>Django</p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-cogs"></i>
+                    <p>Spring</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-github"></i>
+                    <p>GitHub</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-mdb"></i> 
+                    <p>MongoDB</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-bootstrap"></i>
+                    <p>Bootstrap</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-linux"></i>
+                    <p>Linux</p>
+                </div>          
             </div>
         </div>
     </div>
@@ -95,31 +120,47 @@
 
 
 <section id="projects" class="projects fade in box-shadow">
-    <div class="container">
-        <h2 class="titles">Projects</h2>
+    <h2 class="titles">Projects</h2>
+    <div class="showcase-container">
         <!-- Project 1 Preview -->
         <div class="project">
             <h3 class="sub-titles">Little Legends Daycare (Website)</h3>
             <p class="text">"Little Legends Daycare's website is a user-friendly hub providing parents with essential information about our nurturing environment, programs, and dedicated staff."</p>
             
             <a href="https://3jordan.github.io/little-legends/" target="_blank">
-                <img class="project-image" src="images/Little-Legends.png" alt="Little Legends Daycare Preview">
+            <div class="slideshow">
+                <div class="slideshow-container">
+                    <img class="project-image" src="images/Little-Legends.png" alt="Little Legends Daycare Preview">
+                    <img class="project-image" src="images/Little-Legends-Contact.png" alt="Little Legends Calendar">
+                    <img class="project-image" src="images/Little-Legends-Calendar.png" alt="Little-Legends-Calendar">
+                    <img class="project-image" src="images/Little-Legends-About-Us.png">
+                </div>
+            </div>                
             </a>
         </div>
+
         <div class="project">
             <h3 class="sub-titles">Project Copycat</h3>
             <p class="text">This project is a faithful replica of Twitter's login page, showcasing my ability to recreate complex web interfaces and enhance my front-end development skills.</p>
             <a href="https://3jordan.github.io/copycat/" target="_blank">
-            <img class="project-image"  src="images/twitter-copycat-ss.png" alt="Project Copycat Preview">
+            <div class="slideshow">   
+                <img class="project-image"  src="images/twitter-copycat-ss.png" alt="Project Copycat Preview">
+            </div>
             </a>
         </div>
+
         <div class="project">
             <h3 class="sub-titles">Project Fictional Charity</h3>
             <p class="text">This website design project is dedicated to a fictional charity organization, highlighting my creative prowess in crafting impactful web experiences for philanthropic causes.</p>
             <a href="https://3jordan.github.io/fictional-charity/" target="_blank">
-            <img class="project-image"  src="images/fictional-charity-ss.png"  alt="Project Fictional Charity Preview">
+            <div class="slideshow">
+                <img class="project-image"  src="images/fictional-charity-ss.png"  alt="Project Fictional Charity Preview">
+                <img class="project-image"  src="images/Fictional-Charity-Events&Contact.png"  alt="Project Fictional Charity Preview">
+                <img class="project-image"  src="images/Fictional-Charity-Projects.png"  alt="Project Fictional Charity Preview">
+            </div>
             </a>
         </div>
+
     </div>
 </section>
 
@@ -135,21 +176,6 @@
         </p>
     </div>
 </section>
-
-    <!-- Animated Counters -->
-    <section id="counters" class="counters">
-        <div class="container">
-            <h2 class="titles">Accomplishments</h2>
-            <div class="counter">
-                <div class="counter-icon">Projects</div>
-                <div class="counter-value">4</div>
-            </div>
-            <div class="counter">
-                <div class="counter-icon">Lines of Code</div>
-                <div class="counter-value">5.5k</div>
-            </div>
-        </div>
-    </section>
 
     <section id="contact" class="contact">
         <div class="container">
