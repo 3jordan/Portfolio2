@@ -498,6 +498,16 @@
   }
   
 
+.social-links{
+    font-size: 58px;
+}
+
+.social-link-symbol{
+    padding: 0px 20px 0px;
+}
+
+
+
 
 /* larger than 768px */
 .main-body {

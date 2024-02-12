@@ -69,7 +69,7 @@ document.querySelectorAll(".project").forEach((project) => {
     intervalId = setInterval(function () {
       showImage(currentIndex);
       currentIndex = (currentIndex + 1) % images.length;
-    }, 2000);
+    }, 925);
   }
 
   function stopSlideshow() {
